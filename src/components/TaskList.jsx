@@ -4,18 +4,22 @@ import '../styles/taskList.css'
 
 const TaskList = ({ tasks, onTaskComplete, onTaskDelete }) => {
   return (
-    <div>
-      <h2>Lista de Tareas</h2>
-      <ul>
-        {tasks.map(task => (
-          <TaskItem
-            key={task.id}
-            task={task}
-            onTaskComplete={onTaskComplete}
-            onTaskDelete={onTaskDelete}
-          />
-        ))}
-      </ul>
+    <div className='flex flex-col items-center gap-2'>
+      <h2>LISTA DE TAREAS</h2>
+      {tasks.length !== 0 ? (
+        <ul>
+          {tasks.map(task => (
+            <TaskItem
+              key={task.id}
+              task={task}
+              onTaskComplete={onTaskComplete}
+              onTaskDelete={onTaskDelete}
+            />
+          ))}
+        </ul>
+      ) : (
+        <h1>No hay tareas</h1>
+      )}
     </div>
   );
 };

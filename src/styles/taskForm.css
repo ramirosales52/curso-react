@@ -1,0 +1,21 @@
+/* .submitButton {
+
+} */
+h2 {
+  font-weight: 700;
+}
+
+input {
+  background-color: white;
+  border: 2px solid #cfcfcf;
+  border-radius: 6px;
+  font-size: 16px;
+  padding: 5px 6px;
+  transition: all 0.3s;
+  outline: none;
+  width: 400px;
+}
+
+input:focus {
+  border: 2px solid #e4b254!important;
+}

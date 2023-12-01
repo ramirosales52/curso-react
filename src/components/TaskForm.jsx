@@ -11,16 +11,17 @@ const TaskForm = ({ onAddTask }) => {
   };
 
   return (
-    <div>
-      <h2>Agregar Tarea</h2>
-      <form onSubmit={handleSubmit}>
+    <div className='flex items-center p-12 mb-3 px-24 rounded-lg gap-3 flex-col bg-blue-300'>
+      <h2>AGREGAR TAREA</h2>
+      <form onSubmit={handleSubmit} className='flex gap-2'>
         <input
+          required
           type="text"
           placeholder="Nombre de la tarea"
           value={taskName}
           onChange={(e) => setTaskName(e.target.value)}
         />
-        <button type="submit">Agregar</button>
+        <button className='submitButton' type="submit">Agregar</button>
       </form>
     </div>
   );
